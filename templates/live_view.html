@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Live View {{ block.super }}{% endblock %}
+
+{% block content %}
+<h1>Contact</h1>
+<form role="form" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="checkbox">
+          <label><input type="checkbox" name="Facebook"> Facebook</label>
+        </div>
+    <div class="checkbox">
+          <label><input type="checkbox" name="Twitter"> Twitter</label>
+        </div>
+    <div class="checkbox">
+          <label><input type="checkbox" name="Yelp"> Yelp</label>
+        </div>
+    <div class="checkbox">
+          <label><input type="checkbox" name="Morris"> Morris</label>
+        </div>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
